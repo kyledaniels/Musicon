@@ -14,8 +14,12 @@
         <section class="details">
           <h2 class="name">{{this.name}}</h2>
           <p class="description">{{this.description}}</p>
-          <p class="price"><del>{{this.price}}</del></p>
-          <p class="sale">{{this.sale}}</p>
+          {{#if sale}}
+          <p class="price"><del>Price:{{this.price}}</del></p>
+          <p class="sale">On Sale!{{this.sale}}</p>
+          {{else}}
+          <p class="price">Price: {{this.price}}</p>
+          {{/if}}
         </section>
       </article>
       {{/each}}
