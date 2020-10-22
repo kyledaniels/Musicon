@@ -7,6 +7,19 @@
     <title>Musicon</title>
     <link href="public/style.css" rel="stylesheet">
     <script src="handlebars.min.js"></script>
+    <script id="templateHB" type="text/x-handlebars-template">
+      {{#each instruments}}
+      <article class="instrument">
+        <img class="image" src= {{this.image}} alt={{this.name}}>
+        <section class="details">
+          <h2 class="name">{{this.name}}</h2>
+          <p class="description">{{this.description}}</p>
+          <p class="price"><del>{{this.price}}</del></p>
+          <p class="sale">{{this.sale}}</p>
+        </section>
+      </article>
+      {{/each}}
+    </script>
   </head>
 
   <body>
